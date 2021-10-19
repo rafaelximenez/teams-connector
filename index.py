@@ -1,10 +1,9 @@
 from datetime import datetime
-from faker import Faker
-
 from teams import Teams
 
-fake = Faker()
-teams = Teams('url')
+from config import URL_TEAMS
+
+teams = Teams(URL_TEAMS)
 
 def __get_period():
     #now=fake.date_time()

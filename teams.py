@@ -1,4 +1,4 @@
-from pyteams import connectorcard
+from pymsteams import connectorcard
 
 class Teams:
     def __init__(self, url_connect):
@@ -7,4 +7,4 @@ class Teams:
     def send_message(self, text):
         channel = connectorcard(self.url_connect)
         channel.text(text)
-        channel.save()
+        channel.send()
