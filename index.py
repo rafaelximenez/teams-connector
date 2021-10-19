@@ -3,6 +3,7 @@ from teams import Teams
 
 from config import URL_TEAMS
 
+
 teams = Teams(URL_TEAMS)
 
 def __get_period():
@@ -14,15 +15,7 @@ def __get_period():
     elif time > 1200 and time <= 1800: return 'Boa tarde'
     else: return 'Boa noite'
 
-def calculateRangeDate(value, column1, column2):
-    if 'nat' in [str(value[column1]).lower(), str(value[column2]).lower()] :
-        return 0
 
-    d2 = datetime.strptime(str(value[column1]), '%Y-%m-%d %H:%M:%S')
-    d1 = datetime.strptime(str(value[column2]), '%Y-%m-%d %H:%M:%S')
-    interval = abs((d2 - d1).days)
-
-    return interval
 
 period = __get_period()
 
